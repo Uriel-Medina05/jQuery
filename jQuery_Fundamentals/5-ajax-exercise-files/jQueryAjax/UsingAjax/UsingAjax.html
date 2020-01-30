@@ -12,7 +12,7 @@
                        FirstName: $('#FirstNameTB').val(),
                        LastName: $('#LastNameTB').val()
                    });
-                $.ajax({
+                $.ajax({ 
                     url: '../CustomerService.svc/InsertCustomer',
                     data: customer,
                     dataType: 'json',
