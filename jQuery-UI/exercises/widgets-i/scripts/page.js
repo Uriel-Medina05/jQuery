@@ -3,6 +3,7 @@
 
 $(function(){
 
+// ********** DIALOG ***********
 	$("#dialog").dialog(
 		{
 			autoOpen: false,
@@ -26,6 +27,8 @@ $(function(){
 		$('#dialog').dialog('open');
 	});
 
+
+// ******** PROGRESS-BAR ************
 	// $('#progress').progressbar({value: 60});
 
 	$('#progress').progressbar({value: 100});
@@ -49,5 +52,17 @@ $(function(){
 			$('#progress').disable();
 		}
 	}
+
+// ********** SLIDER **************
+
+	$('#slider').slider({
+		min: 0, max:100, value:100, slide: function(event, ui) {
+			$('#slider').prev().css({opacity: ui.value/100});
+		}
+	});
+
+// ******* TABS **********
+
+	$('#tabs').tabs();
 	
 });
